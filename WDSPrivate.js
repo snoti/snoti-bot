@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const prefix = ("$");
-const path = require('path')
-const config = require('./config/config.json')
+const prefix = ("*");
 const start = Date.now();
 const token = process.env.TOKEN
 const ClientID = "322534386601820171"
@@ -13,7 +11,7 @@ const rdm_img = [
 const rdmgif = rdm_img[Math.floor(Math.random() * rdm_img.length)];
 
 bot.on('ready', () => {
-    console.log("🔩 Selfbot by WDS :)");
+    console.log("🔩 Selfbot by is Zebulon running now ... 🔩");
 });     
 
 bot.on('message', message => {
@@ -27,21 +25,21 @@ bot.on('message', message => {
     const voice = message.guild.channels.filter(c => c.type === "voice")
     var category_embed = new Discord.RichEmbed()
     .setAuthor("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-    .setFooter("© SelfBot by asuke")
+    .setFooter("© SelfBot by Zebulon")
     .setThumbnail("https://i.imgur.com/b0deTHt.gif")
     .setColor('#cee4e6')
     .addField("𝘾𝙖𝙩𝙚𝙜𝙤𝙧𝙮 𝙇𝙞𝙨𝙩", categories.map(c => c.name))
     message.channel.sendEmbed(category_embed);
     var text_embed = new Discord.RichEmbed()
     .setAuthor("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-    .setFooter("© SelfBot by asuke")
+    .setFooter("© SelfBot by Zebulon")
     .setThumbnail("https://i.imgur.com/b0deTHt.gif")
     .setColor('#cee4e6')
     .addField("𝙏𝙚𝙭𝙩 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙇𝙞𝙨𝙩", text.map(c => c.name))
     message.channel.sendEmbed(text_embed);
     var voice_embed = new Discord.RichEmbed()
     .setAuthor("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-    .setFooter("© SelfBot by asuke")
+    .setFooter("© SelfBot by Zebulon")
     .setThumbnail("https://i.imgur.com/b0deTHt.gif")
     .setColor('#cee4e6')
     .addField("𝙑𝙤𝙞𝙘𝙚 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙇𝙞𝙨𝙩", voice.map(c => c.name))
@@ -54,7 +52,7 @@ bot.on('message', message => {
     if (message.deletable) message.delete();
     var help_embed = new Discord.RichEmbed()
     .setAuthor("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-    .setFooter("© SelfBot by asuke")
+    .setFooter("© SelfBot by Zebulon")
     .setThumbnail("https://i.imgur.com/b0deTHt.gif")
     .setColor('#cee4e6')
     .addField("  -| 𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙚𝙨 𝙂𝙀𝙉𝙀𝙍𝘼𝙇 |-  ", "🌐  *𝙜𝙚𝙣𝙚𝙧𝙖𝙡 : `𝘼𝙛𝙛𝙞𝙘𝙝𝙚 𝙡𝙚𝙨 𝙘𝙤𝙢𝙢𝙖𝙣𝙙𝙚𝙨 𝙂𝙀𝙉𝙀𝙍𝘼𝙇!` \n" + "󠂪")
@@ -69,7 +67,7 @@ bot.on('message', message => {
     if (message.deletable) message.delete();
     var raid_embed = new Discord.RichEmbed()
         .setAuthor("🤖𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-        .setFooter("© SelfBot by asuke")
+        .setFooter("© SelfBot by Zebulon")
         .addField("  -| 𝓦.𝓓.𝓢 𝘋𝘦𝘴𝘵𝘳𝘰𝘺 ! |-  ", "🌇  *𝙨𝙚𝙡𝙛 : `𝘼𝙛𝙛𝙞𝙘𝙝𝙚 𝙡𝙖 𝙘𝙤𝙢𝙢𝙖𝙣𝙙𝙚 𝙥𝙤𝙪𝙧 𝘿𝙀𝙎𝙏𝙍𝙊𝙔!`\n" + "󠂪")
         .addField("  -| 𝓦.𝓓.𝓢𝘉𝘢𝘯 𝘩𝘢𝘮𝘮𝘦𝘳 |-  ", "⚔️ *𝒃𝒂𝒏 `𝘽𝙖𝙣 𝙩𝙤𝙪𝙩 𝙡𝙚 𝙈𝙊𝙉𝘿𝙀!`\n" + "󠂪")
         .addField("  -| 𝓦.𝓓.𝓢𝘊𝘭𝘦𝘢𝘳 𝘊𝘩𝘢𝘯𝘯𝘦𝘭𝘴 |-  ", "⚔️ *𝒄𝒍𝒆𝒂𝒓𝒄𝒉𝒂𝒏 : `𝙎𝙪𝙥𝙥𝙧𝙞𝙢𝙚 𝙩𝙤𝙪𝙩 𝙡𝙚𝙨 𝘾𝙃𝘼𝙉𝙉𝙀𝙇𝙎!`\n" + "󠂪")
@@ -85,7 +83,7 @@ bot.on('message', message => {
         if (message.deletable) message.delete();
         var fun_embed = new Discord.RichEmbed()
             .setAuthor("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-            .setFooter("© SelfBot by asuke")
+            .setFooter("© SelfBot by Zebulon")
             .addField("  -| 𝓦.𝓓.𝓢 𝘗𝘪𝘯𝘨 |-  ", "🔌  *𝙥𝙞𝙣𝙜 : `𝘼𝙛𝙛𝙞𝙘𝙝𝙚 𝙡𝙚𝙨 𝙋𝙄𝙉𝙂!`\n" + "󠂪")
             .addField("  -| 𝓦.𝓓.𝓢 8𝘣𝘢𝘭𝘭 |-  ", "💎 *𝟖𝒃𝒂𝒍𝒍 : `𝙋𝙤𝙨𝙚𝙯 𝙢𝙤𝙞 𝙪𝙣𝙚 𝙌𝙐𝙀𝙎𝙏𝙄𝙊𝙉!`\n" + "󠂪")
             .setColor('#cee4e6')
@@ -101,7 +99,7 @@ bot.on('message', message => {
         if (message.deletable) message.delete();
         var bonus_embed = new Discord.RichEmbed()
             .setAuthor("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-            .setFooter("© SelfBot by Asuke")
+            .setFooter("© SelfBot by Zebulon")
             .addField("  -| 𝓦.𝓓.𝓢 𝘓𝘪𝘴𝘵𝘦𝘯 |-  ", "🎧 ~ *𝙡𝙞𝙨𝙩𝙚𝙣 [𝙩𝙚𝙭𝙩𝙚] : `𝘼𝙛𝙛𝙞𝙘𝙝𝙚 𝙡𝙚 [𝙩𝙚𝙭𝙩𝙚] 𝙚𝙣 𝙀𝘾𝙊𝙐𝙏𝙀!`\n" + "󠂪")
             .addField("  -| 𝓦.𝓓.𝓢 𝘗𝘭𝘢𝘺 |-  ", "🎮 ~ *𝙥𝙡𝙖𝙮 [𝙩𝙚𝙭𝙩𝙚] : `𝘼𝙛𝙛𝙞𝙘𝙝𝙚 𝙡𝙚 [𝙩𝙚𝙭𝙩𝙚] 𝙖𝙪𝙦𝙪𝙚𝙡 𝙩𝙪 𝙫𝙚𝙪𝙭 𝙅𝙊𝙐𝙀𝙍!`\n" + "󠂪")
             .addField("  -| 𝓦.𝓓.𝓢 𝘞𝘢𝘵𝘤𝘩 |-  ", "💻 ~ *𝙬𝙖𝙩𝙘𝙝 [𝙩𝙚𝙭𝙩𝙚] : `𝘼𝙛𝙛𝙞𝙘𝙝𝙚 𝙡𝙚 [𝙩𝙚𝙭𝙩𝙚] 𝙦𝙪𝙚 𝙩𝙪 𝙍𝙀𝙂𝘼𝙍𝘿𝙀𝙎!`\n" + "󠂪")
@@ -126,7 +124,7 @@ bot.on('message', message => {
         var serversEmbed = new Discord.RichEmbed()
             .setColor('#cee4e6')
             .setTitle("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-            .setFooter("© SelfBot by asuke")
+            .setFooter("© SelfBot by Zebulon")
             .setThumbnail("https://i.imgur.com/b0deTHt.gif")
             .addField("Connecté à ", server_count_guilds + " **servers**")
             .addField("Lis actuellement ", server_count_channels + " **channels**")
@@ -141,7 +139,7 @@ bot.on('message', message => {
         if (message.deletable) message.delete();
         var help_embed = new Discord.RichEmbed()
             .setAuthor("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-            .setFooter("© SelfBot by asuke")
+            .setFooter("© SelfBot by Zebulon")
             .addField("  -| 𝓦.𝓓.𝓢 𝘈𝘷𝘢𝘵𝘢𝘳 |-  ", "✏️  *𝙖𝙫𝙖𝙩𝙖𝙧 : `𝙛𝙛𝙞𝙘𝙝𝙚 𝙡'𝘼𝙑𝘼𝙏𝘼𝙍 𝙙𝙚 𝙡𝙖 𝙥𝙚𝙧𝙨𝙤𝙣𝙣𝙚!`\n" + "󠂪")
             .addField("  -| 𝓦.𝓓.𝓢 𝘗𝘳𝘦𝘧𝘪𝘹 |-  ", "✏️  *𝙥𝙧𝙚𝙛𝙞𝙭 : `𝙋𝙚𝙧𝙢𝙚𝙩 𝙙𝙚 𝙘𝙝𝙖𝙣𝙜𝙚𝙧 𝙡𝙚 𝙋𝙍𝙀𝙁𝙄𝙓 𝙨𝙪𝙧 𝙡𝙚 𝙨𝙚𝙧𝙫𝙚𝙪𝙧!`\n" + "󠂪")
             .addField("  -| 𝓦.𝓓.𝓢 𝘗𝘶𝘳𝘨𝘦 |-  ", "⚖️  *𝙥𝙪𝙧𝙜𝙚 : `𝙎𝙪𝙥𝙥𝙧𝙞𝙢𝙚 𝙡𝙚𝙨 𝙢𝙚𝙨𝙨𝙖𝙜𝙚𝙨 𝙋𝙐𝙍𝙂𝙀!`\n" + "󠂪")
@@ -174,7 +172,7 @@ bot.on('message', message => {
 
         var help_embed = new Discord.RichEmbed()
         .setAuthor("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-        .setFooter("© SelfBot by asuke")
+        .setFooter("© SelfBot by Zebulon")
         .setThumbnail("https://i.imgur.com/EAkHOgY.gif")
         .addField("👽 𝓦.𝓓.𝓢 𝙎𝙔𝙎𝙏𝙀𝙈 𝙎𝙀𝘾𝙐𝙍𝙄𝙏𝙔™  👽", "  => 𝙍𝙪𝙣𝙣𝙞𝙣𝙜 𝙨𝙘𝙧𝙞𝙥𝙩 ```Sebek.js``` ... ")
         .setColor('#090000')
@@ -231,7 +229,7 @@ bot.on('message', message => {
         const avatarList = message.mentions.users.map(user => {
             const getav_embed = new Discord.RichEmbed()
             .setAuthor("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-            .setFooter("© SelfBot by Asuke")
+            .setFooter("© SelfBot by Zebulon")
             .addField("Voici l'image de ta proie.", "👽 - N'oublions pas de dire merci !")
             .setImage(`${user.displayAvatarURL}`)
             .setThumbnail("https://i.imgur.com/KyJsxMi.gif")
@@ -251,7 +249,7 @@ bot.on('message', message => {
 
         var help_embed = new Discord.RichEmbed()
             .setAuthor("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-            .setFooter("© SelfBot by ASUKE")
+            .setFooter("© SelfBot by Zebulon")
             .setImage("https://i.imgur.com/EAkHOgY.gif")
             .setThumbnail("https://i.imgur.com/KyJsxMi.gif")
             .addField("👽 -| 𝓦.𝓓.𝓢 𝘋𝘪𝘴𝘤𝘰𝘳𝘥 |- 👽", "🧙‍ - *`𝓦.𝓓.𝓢#dediakalash`*")
@@ -268,7 +266,7 @@ bot.on('message', message => {
 
         var help_embed = new Discord.RichEmbed()
             .setAuthor("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-            .setFooter("© SelfBot by ASUKE")
+            .setFooter("© SelfBot by Zebulon")
             .setThumbnail("https://i.imgur.com/KyJsxMi.gif")
             .addField("👽 -| 𝓦.𝓓.𝓢 𝐒𝐄𝐋𝐅𝐁𝐎𝐓™ |- 👽", "🌇 -$serveur@destroy : `𝙎𝙚𝙧𝙫𝙚𝙧 𝘿𝙚𝙨𝙩𝙤𝙮𝙚𝙙 !`")
             .setImage("https://i.imgur.com/EAkHOgY.gif")
@@ -319,7 +317,7 @@ if(message.content === "$serveur@destroy"){
     if (message.author.id != `${ClientID}`) return;
  
       setInterval (function () { message.channel.send("@everyone @here . REJOINS NOUS ICI !!! \n"+
-      "FUCKED BY asuke \n"+
+      "FUCKED BY Zebulon \n"+
      "https://discord.gg/a4mBCRk \n"+
      "https://discord.gg/PCNJfgA", { tts: true } ).catch(error => {}) }, 400)
     }
@@ -333,16 +331,16 @@ if(message.content === "$serveur@destroy"){
    if (cmd == "$purge") { message.channel.fetchMessages().then((message) => message.forEach(m => m.delete())); }
    if (cmd == "$del") { message.channel.fetchMessages().then((message) => message.forEach(m => m.delete())); }
    if (cmd == "$ddos") { if (message.author.id != `${ClientID}`) return;
- if (message.deletable) message.delete(); var ip = args[0]; var port = args[1]; let ddosembed = new Discord.RichEmbed().setTitle("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖").setColor("#1a1aff").setThumbnail(bot.user.avatarURL).addField("𝐈𝐏:", ip).addField("𝐏𝐎𝐑𝐓:", port).setFooter(`© SelfBot by asuke`); message.channel.send(ddosembed); var charge = "."; var chargeC = "¦"; message.channel.send("```[" + charge.repeat(40) + "]```").then((message) => { for (i = 0; i <= 40; i++) { message.edit("```[" + chargeC.repeat(i) + charge.repeat(40 - i) + "]  -  " + i * 100 / 40 + "%```"); } }) }
+ if (message.deletable) message.delete(); var ip = args[0]; var port = args[1]; let ddosembed = new Discord.RichEmbed().setTitle("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖").setColor("#1a1aff").setThumbnail(bot.user.avatarURL).addField("𝐈𝐏:", ip).addField("𝐏𝐎𝐑𝐓:", port).setFooter(`© SelfBot by Zebulon`); message.channel.send(ddosembed); var charge = "."; var chargeC = "¦"; message.channel.send("```[" + charge.repeat(40) + "]```").then((message) => { for (i = 0; i <= 40; i++) { message.edit("```[" + chargeC.repeat(i) + charge.repeat(40 - i) + "]  -  " + i * 100 / 40 + "%```"); } }) }
    if (cmd == `$sinfo`) { if (message.author.id != `${ClientID}`) return;
- message.channel.bulkDelete(1); let sicon = message.guild.iconURL; let serverembed = new Discord.RichEmbed().setDescription("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖").setFooter("© SelfBot by asuke").setThumbnail("http://image.noelshack.com/fichiers/2018/52/7/1546149106-babybossdestroy.jpg").setImage("https://i.imgur.com/EAkHOgY.gif").setColor("#1a1aff").setThumbnail(sicon).addField("👽 𝐒𝐞𝐫𝐯𝐞𝐫 𝐍𝐚𝐦𝐞:", message.guild.name).addField("👽 𝐈𝐃:", message.guild.id).addField("👽 𝐎𝐰𝐧𝐞𝐫 𝐨𝐟 𝐭𝐡𝐞 𝐬𝐞𝐫𝐯𝐞𝐫:", message.guild.owner.user).addField("👽 𝐑𝐞𝐠𝐢𝐨𝐧:", message.guild.region).addField("👽 𝐕𝐞𝐫𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝐋𝐞𝐯𝐞𝐥:", message.guild.verificationLevel).addField("👽 𝐂𝐫𝐞𝐚𝐭𝐞𝐝 𝐎𝐧:", message.guild.createdAt).addField("👽 𝐘𝐨𝐮 𝐉𝐨𝐢𝐧𝐞𝐝:", message.member.joinedAt).addField("👽 𝐓𝐨𝐭𝐚𝐥 𝐌𝐞𝐦𝐛𝐞𝐫𝐬:", message.guild.memberCount); return message.channel.send(serverembed); }
+ message.channel.bulkDelete(1); let sicon = message.guild.iconURL; let serverembed = new Discord.RichEmbed().setDescription("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖").setFooter("© SelfBot by Zebulon").setThumbnail("http://image.noelshack.com/fichiers/2018/52/7/1546149106-babybossdestroy.jpg").setImage("https://i.imgur.com/EAkHOgY.gif").setColor("#1a1aff").setThumbnail(sicon).addField("👽 𝐒𝐞𝐫𝐯𝐞𝐫 𝐍𝐚𝐦𝐞:", message.guild.name).addField("👽 𝐈𝐃:", message.guild.id).addField("👽 𝐎𝐰𝐧𝐞𝐫 𝐨𝐟 𝐭𝐡𝐞 𝐬𝐞𝐫𝐯𝐞𝐫:", message.guild.owner.user).addField("👽 𝐑𝐞𝐠𝐢𝐨𝐧:", message.guild.region).addField("👽 𝐕𝐞𝐫𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝐋𝐞𝐯𝐞𝐥:", message.guild.verificationLevel).addField("👽 𝐂𝐫𝐞𝐚𝐭𝐞𝐝 𝐎𝐧:", message.guild.createdAt).addField("👽 𝐘𝐨𝐮 𝐉𝐨𝐢𝐧𝐞𝐝:", message.member.joinedAt).addField("👽 𝐓𝐨𝐭𝐚𝐥 𝐌𝐞𝐦𝐛𝐞𝐫𝐬:", message.guild.memberCount); return message.channel.send(serverembed); }
    if (cmd == `$minfo`){ 
     if (message.author.id != `${ClientID}`) return;
 
     if (message.deletable) message.delete();
     const mention = message.mentions.members.first();
     var micon = mention.user.avatarURL; var memberembed = new Discord.RichEmbed()
-    .setDescription("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖").setFooter("© SelfBot by asuke").setThumbnail("https://i.imgur.com/KyJsxMi.gif").setImage("https://i.imgur.com/EAkHOgY.gif").setColor("#090000")
+    .setDescription("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖").setFooter("© SelfBot by Zebulon").setThumbnail("https://i.imgur.com/KyJsxMi.gif").setImage("https://i.imgur.com/EAkHOgY.gif").setColor("#090000")
     .setThumbnail(micon)
     .addField("👽 𝐓𝐀𝐆 𝐝𝐞 𝐥𝐚 𝐩𝐫𝐨𝐢𝐞:", mention.user.tag)
     .addField("👽 𝐈𝐃 𝐝𝐞 𝐜𝐞 𝐬𝐢𝐧𝐠𝐞 !:", mention.user.id)
@@ -364,7 +362,7 @@ if(message.content === "$serveur@destroy"){
         let bembed = new Discord.RichEmbed()
             .setColor('#cee4e6')
             .setTitle("🤖 𝓦.𝓓.𝓢 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐚𝐭𝐢𝐨𝐧𝐬 🤖")
-            .setFooter("© SelfBot by ASUKE")
+            .setFooter("© SelfBot by Zebulon")
             .setThumbnail("https://i.imgur.com/b0deTHt.gif")
             .addField(`Question de ${message.author.tag}`, question)
             .addField("Réponse : ", replies[res])
@@ -390,7 +388,7 @@ if(message.content === "$serveur@destroy"){
     
             let StreamTime = args.slice(0).join(" ");
     
-            bot.user.setActivity(`${StreamTime}`, {type: "STREAMING", url: 'https://www.twitch.tv/ASUKE'})
+            bot.user.setActivity(`${StreamTime}`, {type: "STREAMING", url: 'https://www.twitch.tv/Zebulon'})
         }
     
         if ( cmd === prefix + "listen") {
@@ -413,25 +411,6 @@ if(message.content === "$serveur@destroy"){
     
             bot.user.setActivity(`${PlayTime}`, {type: "PLAYING"})
         }
-let avatars = []
-if (config.rotateAvatarImage) {
-  const dir = path.join(__dirname, 'config/avatars/')
-  fs.readdir(dir, (err, files) => {
-    log.fs(`Loading ${files.length} files...`, 'Avatars')
-    if (err) return log.err(err, 'Avatars Directory Reading')
-    if (!files) { return log.err('No avatar images found.', 'Avatars Directory Reading') } else {
-      for (let avatar of files) {
-        let ext = path.extname(avatar).match(/\.png|\.jpeg|\.gif|\.jpg/)
-        if (!ext) continue
-        try {
-          let data = fs.readFileSync(path.join(dir, avatar))
-          log.fs(`Loaded: ${avatar}`, 'Avatars')
-          avatars.push(`data:image/${ext[0].replace('.', '')};base64,${new Buffer(data).toString('base64')}`)
-        } catch (err) { log.err(err, 'Avatars Directory Reading') }
-      }
-      if (avatars.length === 0) return log.fs('No images found.', 'Avatars')
-      log.fs('Finished.', 'Avatars')
-    
 
 });
 
